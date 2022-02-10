@@ -1,0 +1,90 @@
+<!--
+
+
+<div class="alert" *ngIf="successMsg" color="accent">
+
+  <h1> {{ successMsg }} </h1>
+
+</div>
+
+
+
+
+
+<body>
+  <div class="container">
+    <form  (submit)="edit ? updateBook() : submitBook()" >
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Title</label>
+        </div>
+        <div class="col-25">
+          <input type="text"  [(ngModel)]="book.Title" id="fname" name="Title" placeholder="Title">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Author</label>
+        </div>
+        <div class="col-25">
+          <input type="text" [(ngModel)]="book.Author" id="lname" name="lastname" placeholder="Author">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Image URL</label>
+        </div>
+        <div class="col-25">
+          <input type="text" id="lname" [(ngModel)]="book.imageURL" name="lastname" placeholder="Image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Description</label>
+        </div>
+        <div class="col-25">
+          <textarea id="subject" [(ngModel)]="book.description" name="subject" placeholder="Description" style="height:100px"></textarea>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <input  class="btn" type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body> -->
+
+
+<div class="float-container">
+
+  <div class="float-left">
+    <div class="green">
+
+
+
+    </div>
+  </div>
+
+  <div class="float-right">
+    <div class="blue">
+
+
+      <form  (submit)="edit ? updateBook() : submitBook()" >
+        <label for="fname">Title</label>
+        <input type="text"  name="Title" [(ngModel)]="book.Title" placeholder="Title">
+
+        <label for="lname">Author</label>
+        <input type="text" name="Author" [(ngModel)]="book.Author" placeholder="Author">
+
+        <label for="lname">Description</label>
+        <input type="text"  name="Description" [(ngModel)]="book.imageURL"  placeholder="Description">
+        <label for="lname">ImageUrl</label>
+        <input type="text"  name="ImageUrl" [(ngModel)]="book.description" placeholder="ImageUrl">
+
+       <button class="btn">Submit</button>
+      </form>
+
+    </div>
+  </div>
+
+</div>

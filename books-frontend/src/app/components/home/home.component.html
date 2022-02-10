@@ -1,0 +1,79 @@
+
+
+
+
+<div class="container">
+
+
+
+
+</div>
+
+ <nav class="navbar">
+ <!-- LOGO -->
+ <div class="logo">Books  Application</div>
+ <!-- NAVIGATION MENU -->
+ <ul class="nav-links">
+
+
+ <!-- NAVIGATION MENUS -->
+ <div class="menu">
+  <li><a href="/home">Books</a></li>
+ <li><a routerLink="/book/create" routerLinkActive="active" >Create a Book</a></li>
+
+
+ </div>
+ </ul>
+ </nav>
+
+
+ <div class="alert" *ngIf="successMsg" color="accent">
+
+  <h6> {{ successMsg }} </h6>
+
+</div>
+
+
+
+
+<body>
+
+<div class="wrapper">
+
+
+	<div class="cards_wrap">
+		<div class="card_item" *ngFor="let book of books" >
+			<div class="card_inner">
+				<img [src]="book.imageURL">
+				<div class="role_name">{{book.Title}}</div>
+				<div class="real_name">{{book.Author}}</div>
+				<div class="film">{{book.description}}</div>
+        <div  class="con">
+
+          <button class="delete" (click)="deleteBook(book._id)">delete</button>
+
+          <button  class="edit" (click)="goToProfile(book._id)">edit</button>
+        </div>
+
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</div>
+</div>
+
+</body> -
+
+
+
+
+
+
+
+
+
